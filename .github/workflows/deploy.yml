@@ -26,6 +26,15 @@ jobs:
           node-version: 22
       - name: Install Dependencies
         run: npm ci
+      - name: Checkout Private Content Repository
+        run: git clone https://${{ secrets.FINE_GRAINED_PAT_FOR_GARDEN_CONTENT }}@github.com/dpi0/garden-content.git private-content
+      #- uses: actions/checkout@v4
+        #with:
+          #repository: dpi0/garden-content
+          #ref: main
+          #token: ${{ secrets.FINE_GRAINED_PAT_FOR_GARDEN_CONTENT }}
+      - name: Copy Private Content to Content
+        run: cp -r private-content/docs/* content/
       - name: Build Quartz
         run: npx quartz build
       - name: Upload artifact
