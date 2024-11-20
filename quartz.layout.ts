@@ -41,6 +41,7 @@ export const defaultContentPageLayout: PageLayout = {
         linkDistance: 100,
       },
     }),
+    Component.MobileOnly(Component.Explorer()),
   ]
 }
 
