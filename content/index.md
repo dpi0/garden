@@ -1,5 +1,5 @@
 ---
-title: "garden.dpi0.cloud"
+title: "Garden"
 tags:
   - evergreen
 ---
@@ -8,8 +8,8 @@ tags:
 Welcome!
 ```
 
-I'm div. This is my little garden] on the internet -- make yourself at home!
+I'm dpi0. This is my little garden on the internet -- make yourself at home!
 
 ```poetry
-- div :)
+- dpi0 :)
 ```
