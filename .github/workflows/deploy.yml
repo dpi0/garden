@@ -35,7 +35,7 @@ jobs:
         run: git clone https://${{ secrets.FINE_GRAINED_PAT_FOR_NOTES }}@github.com/dpi0/notes.git notes
         
       - name: Copy Private Notes to Content
-        run: rsync -av --exclude='.git' notes/ content/
+        run: rsync -av --exclude='.git' --exclude=".github" --exclude=".obsidian" notes/ content/
         
       - name: Build Quartz
         run: npx quartz build
